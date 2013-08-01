@@ -1,0 +1,53 @@
+@import "compass/typography/vertical_rhythm"
+@include establish-baseline
+
+// media="all"::selection
+//   background: #ff5e99
+//   text-shadow: none
+
+html
+  -webkit-font-smoothing: antialiased
+
+body
+  font-family: 'Helvetica Neue', sans-serif
+
+  h1 
+    @include adjust-font-size-to($font-size-8)
+    @include leader(0)
+    @include trailer(0)
+  h2 
+    @include adjust-font-size-to($font-size-7)
+    @include leader(0)
+    @include trailer(.5)
+  h3 
+    @include adjust-font-size-to($font-size-6)
+  h4 
+    @include adjust-font-size-to($font-size-5)
+  h5 
+    @include adjust-font-size-to($font-size-4)
+  p  
+    @include leader
+    @include trailer
+
+  h2.important 
+    @include leader(2)
+    @include trailer(2)
+
+  a
+    color: $whodini-green-dk
+    &:hover,
+    &:focus,
+    &:active,
+    &.active
+      color: $whodini-green
+
+// Useful mixins
+//@rhythm-borders(px, x, x)
+//@leading-border(x, x, x) // border-width, trailer, font-size
+//@include adjust-font-size-to(x);
+//@include adjust-leadin-to(x);
+//@include adjust-font-size-to(x);
+//@include adjust-leading-to(x);
+//@include leader(x);
+//@include trailer(x);
+//@include rhythm(x,x,x,x,$base-font-size); //trailer, padding-trailer, padding-leader, leader, font-size

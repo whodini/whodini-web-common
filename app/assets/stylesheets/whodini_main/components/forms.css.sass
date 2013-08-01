@@ -1,0 +1,121 @@
+form 
+  margin: 0
+  text-align: left
+
+fieldset 
+  padding: 0
+  margin: 0
+  border: 0
+
+legend 
+  display: block
+  width: 100%
+  padding: 0
+  margin-bottom: 10px
+  font-size: ($base-font-size * 1.5)
+  line-height: ($base-line-height * 2)
+  color: $gray
+  border: 0
+  border-bottom: 1px solid #e5e5e5
+
+label 
+  display: inline-block
+  margin-bottom: 5px
+  font-weight: bold
+  display: block
+  display: none
+
+
+// Form controls
+// -------------------------
+
+// Shared size and type resets
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] 
+  display: inline-block
+  min-height: $base-line-height // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+  padding: 6px 9px
+  // margin-bottom: ($line-height-base / 2)
+  font-size: $base-font-size
+  line-height: $base-line-height
+  color: $gray
+  vertical-align: middle
+  background-color: $input-bg
+  border: 1px solid $input-border
+  border-radius: 3px
+  @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075))
+  // @include ¬(~"border linear .2s, box-shadow linear .2s")
+  +transition(all .5s linear)
+  margin-bottom: 10px
+
+
+// Reset appearance properties for textual inputs and textarea
+// Can't be on input[type=*] selectors or it's too specific
+input,
+select,
+textarea 
+  width: 100%
+
+
+// Reset width of input images, buttons, radios, checkboxes
+input[type="file"],
+input[type="image"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="radio"],
+input[type="checkbox"] 
+  width: auto // Override of generic input selector
+
+
+// Reset height since textareas have rows
+textarea 
+  height: auto
+
+
+// Everything else
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] 
+  // Focus state
+  &:focus 
+    border-color: rgba(82,168,236,.8)
+    outline: 0
+    outline: thin dotted \9 /* IE6-9 */
+    //@include box-shadow(~"inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6)")
+    @include box-shadow(0 0 8px rgba(82,168,236,.6))
+  
+
+
+// Position radios and checkboxes better
+input[type="radio"],
+input[type="checkbox"] 
+  margin: 4px 0 0
+  margin-top: 1px \9 /* IE8-9 */
+  line-height: normal
