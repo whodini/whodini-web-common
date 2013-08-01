@@ -6,6 +6,17 @@
 @import components/grid
 @import components/typography
 
+* 
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+
+::-moz-selection
+  background: lighten($whodini-green, 40%)
+::selection 
+  background: lighten($whodini-green, 40%)
+
+
 // TODO: factor these out in favor of html5bp approach?
 .hide
   display: none
