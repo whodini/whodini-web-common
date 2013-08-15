@@ -5,6 +5,16 @@
 //   background: #ff5e99
 //   text-shadow: none
 
+// $font-size-0:       10px
+// $font-size-1:       12px
+// $font-size-2:       14px
+// $font-size-3:       16px
+// $font-size-4:       18px
+// $font-size-5:       20px
+// $font-size-6:       24px
+// $font-size-7:       36px
+// $font-size-8:       48px
+
 html
   -webkit-font-smoothing: antialiased
 
@@ -12,22 +22,21 @@ body
   font-family: 'Helvetica Neue', sans-serif
 
   h1 
-    @include adjust-font-size-to($font-size-8)
+    @include adjust-font-size-to(48px)
     @include leader(0)
     @include trailer(0)
   h2 
-    @include adjust-font-size-to($font-size-7)
+    @include adjust-font-size-to(36px)
     @include leader(0)
     @include trailer(.5)
   h3 
-    @include adjust-font-size-to($font-size-6)
+    @include adjust-font-size-to(24px)
   h4 
-    @include adjust-font-size-to($font-size-5)
+    @include adjust-font-size-to(20px)
   h5 
-    @include adjust-font-size-to($font-size-4)
+    +adjust-font-size-to(18px)
   p  
-    // @include leader
-    // @include trailer
+    +adjust-font-size-to(16px)
 
   h2.important 
     @include leader(2)
