@@ -3,25 +3,25 @@
 // -------------------------
 // Easily pump out default styles, as well as :hover, :focus, :active,
 // and disabled options for all buttons
-@mixin btn-pseudo-states($background, $border) 
+@mixin btn-pseudo-states($background, $border)
   background-color: $background
   border-color: $border
 
   &:hover,
   &:focus,
   &:active,
-  &.active 
+  &.active
     background-color: darken($background, 5%)
     border-color: darken($border, 10%)
-  
+
 
   &.disabled,
   &[disabled],
-  fieldset[disabled] & 
+  fieldset[disabled] &
     &:hover,
     &:focus,
     &:active,
-    &.active 
+    &.active
       background-color: $background
       border-color: $border
 
@@ -34,8 +34,8 @@
     display: block
     position: relative
     line-height: $base-line-height
-    border-top: 1px solid lighten(black, 40%)
-    border-bottom: 1px solid lighten(black, 25%)
+    // border-top: 1px solid lighten(black, 40%)
+    // border-bottom: 1px solid lighten(black, 25%)
 
     &:first-child
       border-top: none
@@ -52,7 +52,7 @@
 
 
 // Webkit-style focus
-@mixin tab-focus 
+@mixin tab-focus
   // Default
   outline: thin dotted #333
   // Webkit
@@ -66,7 +66,7 @@
 @mixin bdr
   border: 1px solid red
 
-@mixin transition($transition) 
+@mixin transition($transition)
   -webkit-transition: $transition
   -moz-transition: $transition
   -o-transition: $transition
@@ -84,10 +84,10 @@
 //============================================================
 
 @mixin arrow($width: 20px, $height: 20px, $direction: up, $color: red)
-  
-  width: 0 
+
+  width: 0
   height: 0
-  
+
   // Right
   @if $direction == right
     border-top: $height/2 solid transparent
