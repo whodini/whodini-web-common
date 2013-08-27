@@ -7,7 +7,6 @@
   display: inline-block
   padding: 6px 12px
   margin-bottom: 0 // For input.btn
-  font-size: $base-font-size
   font-weight: 500
   line-height: $base-line-height
   text-align: center
@@ -30,8 +29,8 @@
 
   &:active,
   &.active
-    outline: 0
-    background-image: none
+    // outline: 0
+    // background-image: none
     // @include box-shadow(inset 0 3px 5px rgba(0,0,0,.125))
 
   &.disabled,
@@ -47,8 +46,8 @@
   @include btn-pseudo-states($btn-bg, $btn-border)
 
 .btn-primary
+  color: white
   @include btn-pseudo-states($whodini-green, $whodini-green)
-  border: 1px solid red
 // Warning appears as orange
 // .btn-warning
 //   @include btn-pseudo-states($btn-warning-bg, $btn-warning-border)

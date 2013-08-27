@@ -1,44 +1,28 @@
 @import "compass/typography/vertical_rhythm"
 @include establish-baseline
 
-// media="all"::selection
-//   background: #ff5e99
-//   text-shadow: none
-
-// $font-size-0:       10px
-// $font-size-1:       12px
-// $font-size-2:       14px
-// $font-size-3:       16px
-// $font-size-4:       18px
-// $font-size-5:       20px
-// $font-size-6:       24px
-// $font-size-7:       36px
-// $font-size-8:       48px
-
-html
+html, body
   -webkit-font-smoothing: antialiased
-
-body
   font-family: 'Helvetica Neue', sans-serif
 
-  h1 
+  h1
     @include adjust-font-size-to(48px)
     @include leader(0)
     @include trailer(0)
-  h2 
+  h2
     @include adjust-font-size-to(36px)
     @include leader(0)
     @include trailer(.5)
-  h3 
+  h3
     @include adjust-font-size-to(24px)
-  h4 
+  h4
     @include adjust-font-size-to(20px)
-  h5 
+  h5
     +adjust-font-size-to(18px)
-  p  
+  p
     +adjust-font-size-to(16px)
 
-  h2.important 
+  h2.important
     @include leader(2)
     @include trailer(2)
 
