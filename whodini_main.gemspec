@@ -20,6 +20,8 @@ Gem::Specification.new do |s|
   s.add_dependency "compass-rails"
   s.add_dependency "compass-recipes"
   s.add_dependency "compass-h5bp"
+  s.add_dependency "susy"
+  s.add_dependency "modular-scale"
 
   # s.add_dependency "jquery-rails"
 
