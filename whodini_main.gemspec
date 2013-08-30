@@ -17,6 +17,10 @@ Gem::Specification.new do |s|
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 3.2.13"
+  s.add_dependency "compass-rails"
+  s.add_dependency "compass-recipes"
+  s.add_dependency "compass-h5bp"
+
   # s.add_dependency "jquery-rails"
 
   s.add_development_dependency "sqlite3"
