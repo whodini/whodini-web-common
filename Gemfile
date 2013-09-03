@@ -6,7 +6,16 @@ source "http://rubygems.org"
 gemspec
 
 # jquery-rails is used by the dummy application
-gem "jquery-rails"
+group :assets do
+	gem "jquery-rails"
+	gem "compass-rails"
+	gem "compass-recipes"
+	gem "compass-h5bp"
+	gem 'modular-scale'
+	gem 'susy' #robust grid system: http://susy.oddbird.net/#susy-oddbird-net
+
+end
+
 
 # Declare any dependencies that are still in development here instead of in
 # your gemspec. These might include edge Rails or gems from your path or
