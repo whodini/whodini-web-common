@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    whodini_main (0.0.5)
+    whodini_main (0.0.6)
       compass-h5bp
       compass-rails
       compass-recipes
