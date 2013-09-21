@@ -11,7 +11,6 @@ group :assets do
 	gem "compass-rails"
 	gem "compass-recipes"
 	gem "compass-h5bp"
-	gem 'modular-scale'
 	gem 'susy' #robust grid system: http://susy.oddbird.net/#susy-oddbird-net
 
 end

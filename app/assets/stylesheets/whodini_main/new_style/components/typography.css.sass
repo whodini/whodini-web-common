@@ -1,0 +1,81 @@
+// http://compass-style.org/reference/compass/typography/vertical_rhythm/
+// http://atendesigngroup.com/blog/vertical-rhythm-compass
+// base variables set in variables.css.sass
+
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700)
+
++establish-baseline
+
+body
+  // override html5bp font and line-height
+  // vertical-rythm sets these on the html el
+  color: lighten($brand-grey, 25%)
+  line-height: inherit
+  font-size: inherit
+  font-family: 'Source Sans Pro', sans-serif
+  // +debug-vertical-alignment
+
+h1
+  font-weight: 300
+  +adjust-font-size-to(52px)
+  +rhythm(2, 0, 0, 1, 52px)
+  strong
+    font-weight: 600
+
+h2
+  font-weight: 600
+  +adjust-font-size-to(44px)
+  +leader(0)
+  +trailer(.37)
+
+h3
+  font-weight: 600
+  +adjust-font-size-to(24px)
+  +leader(0)
+  +trailer(0)
+
+h4
+  +adjust-font-size-to(18px)
+  +leader(0)
+  +trailer(0)
+
+h5
+  +adjust-font-size-to(16px)
+  +leader(0)
+  +trailer(0)
+
+h6
+  +adjust-font-size-to(16px)
+  +leader(0)
+  +trailer(0)
+
+h1, h2, h3, h4, h5
+  color: black
+
+p
+  +adjust-font-size-to(16px)
+  +leader(0)
+  +trailer(1)
+
+a
+  color: lighten($brand-blue, 5%)
+  text-decoration: none
+  &:hover,
+  &:focus,
+  &:active,
+  &.active
+    color: darken($brand-blue, 10%)
+    text-decoration: underline
+
+ul
+  margin: $base-line-height 0
+
+
+.docked
+  background: lighten($brand-grey, 87%)
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  border-bottom: 1px solid lighten($brand-grey, 75%)
+  z-index: 9999
