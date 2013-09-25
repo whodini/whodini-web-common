@@ -1,11 +1,12 @@
-//============================================================
-//
+// ----------------------------------------------------------------------------
 // Lowest level style definitions
 //
 // Base Typography, Colors, Grid, Buttons, Forms, and Mixins
 // Domain and section specific styles are defined or overridden outside of this gem
-//
-//============================================================
+// @extend is used extensively with these styles
+// Domain and section specific styles are defined or overridden outside of this gem
+
+// ----------------------------------------------------------------------------
 
 @import compass
 @import recipes
@@ -22,6 +23,7 @@
 // http://compass-style.org/reference/compass/typography/vertical_rhythm/
 // http://atendesigngroup.com/blog/vertical-rhythm-compass
 // @include h5bp-typography
+
 
 @include h5bp-lists
 @include h5bp-embeds
@@ -40,13 +42,8 @@
 // http://compass-style.org/help/tutorials/spriting/
 @import "sprites/*.png"
 
-@import new_style/globals/variables
-@import new_style/globals/mixins
-
-@import new_style/components/buttons
-@import new_style/components/forms
-@import new_style/components/grid
-@import new_style/components/typography
+@import whodini_main/new_style/globals/variables
+@import whodini_main/new_style/globals/mixins
 
 *
   -moz-box-sizing: border-box
@@ -57,3 +54,11 @@
   background: lighten(red, 40%)
 ::selection
   background: lighten(red, 40%)
+
+// h5pb overrides
+pre
+  margin:  0
+
+body
+  line-height: inherit
+  font-size: inherit
