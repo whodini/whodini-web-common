@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    whodini_main (0.0.6)
+    whodini_main (0.1.2)
       compass-h5bp
       compass-rails
       compass-recipes
@@ -127,7 +127,6 @@ DEPENDENCIES
   compass-rails
   compass-recipes
   jquery-rails
-  modular-scale
   sqlite3
   susy
   whodini_main!
