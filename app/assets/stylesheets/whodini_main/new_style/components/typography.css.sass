@@ -11,11 +11,12 @@ body
   // vertical-rythm sets these on the html el
   color: lighten($brand-grey, 25%)
   font-family: 'Source Sans Pro', sans-serif
+  font-weight: 300
   // +debug-vertical-alignment
 
 h1
   font-weight: 300
-  +adjust-font-size-to(52px)
+  +adjust-font-size-to(56px)
   +rhythm(2, 0, 0, 1, 52px)
   strong
     font-weight: 600
@@ -37,6 +38,7 @@ h4
 
 h5
   +adjust-font-size-to(16px)
+  +leader(0)
   +trailer(0)
 
 h6
@@ -44,10 +46,11 @@ h6
   +trailer(0)
 
 h1, h2, h3, h4, h5
-  color: black
+  // color: green
 
 p
-  +adjust-font-size-to(16px)
+  word-wrap: break-word
+  +adjust-font-size-to(18px)
 
 a
   color: lighten($brand-blue, 5%)

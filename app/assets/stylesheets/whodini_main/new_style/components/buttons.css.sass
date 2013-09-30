@@ -1,0 +1,63 @@
+//
+// Buttons
+// --------------------------------------------------
+
+// Core styles
+.btn
+  display: inline-block
+  padding: 6px $base-line-height
+  margin-bottom: 0 // For input.btn
+  font-weight: 500
+  line-height: $base-line-height
+  text-align: center
+  vertical-align: middle
+  cursor: pointer
+  border: 1px solid $brand-grey
+  border-radius: 2px
+  white-space: nowrap
+  text-decoration: none
+  +trailer(1)
+  +transition(all .2s ease-in-out)
+
+  &:focus
+    @include tab-focus
+
+
+  &:hover,
+  &:focus
+    color: #fff
+    text-decoration: none
+
+  &:active,
+  &.active
+    // outline: 0
+    // background-image: none
+    // @include box-shadow(inset 0 3px 5px rgba(0,0,0,.125))
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] &
+    cursor: default
+    pointer-events: none // Future-proof disabling of clicks
+    +opacity(.65)
+    +box-shadow(none)
+
+.btn
+  color: $brand-grey
+  @include btn-pseudo-states(lighten($brand-grey, 70%), lighten($brand-grey, 65%))
+
+.btn-primary
+  color: white
+  @include btn-pseudo-states($brand-green-lt, $brand-green-lt)
+// Warning appears as orange
+// .btn-warning
+//   @include btn-pseudo-states($btn-warning-bg, $btn-warning-border)
+// // Danger and error appear as red
+// .btn-danger
+//   @include btn-pseudo-states($btn-danger-bg, $btn-danger-border)
+// // Success appears as green
+// .btn-success
+//   @include btn-pseudo-states($btn-success-bg, $btn-success-border)
+// // Info appears as blue-green
+// .btn-info
+//   @include btn-pseudo-states($btn-info-bg, $btn-info-border)
