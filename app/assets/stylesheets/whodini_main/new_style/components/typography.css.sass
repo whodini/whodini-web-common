@@ -13,16 +13,18 @@ body
   font-family: 'Source Sans Pro', sans-serif
   font-weight: 300
   // +debug-vertical-alignment
+  // for some random reason we don't want any bold fonts anywhere :\
+  font-weight: 300!important
 
 h1
-  font-weight: 300
+  // font-weight: 300
   +adjust-font-size-to(56px)
   +rhythm(2, 0, 0, 1, 52px)
   strong
     font-weight: 600
 
 h2
-  font-weight: 600
+  // font-weight: 600
   +adjust-font-size-to(38px)
   // +leader(1)
   +trailer(.37)
@@ -47,6 +49,8 @@ h6
 
 h1, h2, h3, h4, h5
   // color: green
+
+
 
 p
   word-wrap: break-word
