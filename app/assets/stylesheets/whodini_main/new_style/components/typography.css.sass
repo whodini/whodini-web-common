@@ -9,19 +9,18 @@
 body
   // override html5bp font and line-height
   // vertical-rythm sets these on the html el
-  color: lighten($brand-grey, 25%)
+  // color: lighten($brand-grey, 25%)
+  color: black
   font-family: 'Source Sans Pro', sans-serif
   font-weight: 300
   // +debug-vertical-alignment
-  // for some random reason we don't want any bold fonts anywhere :\
-  font-weight: 300!important
 
 h1
-  // font-weight: 300
+  font-weight: 300
   +adjust-font-size-to(56px)
   +rhythm(2, 0, 0, 1, 52px)
   strong
-    font-weight: 600
+    font-weight: inherit
 
 h2
   // font-weight: 600
@@ -47,7 +46,8 @@ h6
   +adjust-font-size-to(16px)
   +trailer(0)
 
-h1, h2, h3, h4, h5
+p, h2, h3, h4, h5, h6
+  font-weight: normal
   // color: green
 
 
